@@ -29,8 +29,8 @@ let EnemiesObject = {
     szczur: new EnemyGenerator(0, "Szczur", 1, 50, 1, 10, 1, 1, 'images/szczur.jpg'),
     //ID Przeciwnika, Nazwa przeciwnika, Poziom przeciwnika, Życie przeciwnika, Obrażenia przeciwnika,
     //Exp z przeciwnika, Złoto z przeciwnika, Reputacja z przeciwnika, Obrazek przeciwnika.
-    goblin: new EnemyGenerator(1, "Goblin", 5,  200, 1, 50, 10, 5, 'images/goblin.jpg'),
     dzikipies: new EnemyGenerator(2, "Dziki Pies", 3, 150, 1, 25, 5, 10, 'images/wilddog.jpg'),
+    goblin: new EnemyGenerator(1, "Goblin", 5,  200, 1, 50, 10, 5, 'images/goblin.jpg'),
     wilkolak: new EnemyGenerator(3, "Wilkołak", 10, 300, 1, 200, 100, 50, 'images/wolfman.jpg')
 //------------------------------------------------------------------------//
 

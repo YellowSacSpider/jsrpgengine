@@ -1,7 +1,12 @@
 //Funkcja zapisywania i wczytywania localstorage
 import { hello } from './mymodule.js';
-let val = hello();
+import { i, modifyi } from './level.js';
 
+export {LoadLocalStorage}
+export {SaveToLocalStorage}
+export {ClearLocalStorage}
+
+let val = hello();
 
 console.log(val);
 
@@ -29,6 +34,7 @@ let LocalStorage_AbilityPoints;
 let LocalStorage_Guild;
 let LocalStorage_Profession;
 let LocalStorage_img;
+let LocalStorage_i;
 
 function SaveToLocalStorage(){
     PlayerStatsActualizator(); // Aktualizuje statystyki gracza
@@ -57,6 +63,7 @@ function SaveToLocalStorage(){
     localStorage.setItem("Guild", player.Guild);
     localStorage.setItem("Profession", player.Profession);
     localStorage.setItem("img", player.img);
+    localStorage.setItem("i", i);
 
     // Zapisanie stanu dungeonów
 }
@@ -88,6 +95,7 @@ function LoadLocalStorage(){
     LocalStorage_Guild = localStorage.getItem("Guild");
     LocalStorage_Profession = localStorage.getItem("Profession");
     LocalStorage_img = localStorage.getItem("img");
+    LocalStorage_i = localStorage.getItem("i");
 
 	// Ustawia statystyki gracza ze zmiennych
     player.id = LocalStorage_id;
@@ -113,6 +121,7 @@ function LoadLocalStorage(){
     player.Guild = LocalStorage_Guild;
     player.Profession = LocalStorage_Profession;
     player.img = LocalStorage_img;
+    modifyi(LocalStorage_i);
 
     PlayerStatsActualizator(); // Aktualizuje Statystyki gracza
 
@@ -150,8 +159,5 @@ function ClearLocalStorage(){
     localStorage.removeItem("Guild");
     localStorage.removeItem("Profession");
     localStorage.removeItem("img");
+    localStorage.removeItem("i");
 }
-
-export {LoadLocalStorage}
-export {SaveToLocalStorage}
-export {ClearLocalStorage}

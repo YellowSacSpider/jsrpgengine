@@ -98,15 +98,15 @@ while(true){
         console.log("Wygrałeś!");
         
         console.log("Złoto: ", GlobalObjFight.mGOLD);
-        player.GOLD += GlobalObjFight.mGOLD;
+        player.GOLD += parseInt(GlobalObjFight.mGOLD);
         
         if(player.LVL !== expTable.levels.length){
             console.log("Exp: ", GlobalObjFight.mEXP);
-            player.EXP += GlobalObjFight.mEXP;
+            player.EXP += parseInt(GlobalObjFight.mEXP);
         }
 
         console.log("Rep: ", GlobalObjFight.mREP);
-        player.Reputation += GlobalObjFight.mREP;  
+        player.Reputation += parseInt(GlobalObjFight.mREP);  
 
         ExpCheck();
         SaveToLocalStorage();

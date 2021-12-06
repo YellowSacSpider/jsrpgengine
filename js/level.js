@@ -15,10 +15,11 @@ function ExpCheck()
 {
     while(player.EXP >= expTable.exp_value[i])
     {
-            player.LVL = expTable.levels[i];
-            player.MAXEXP = expTable.exp_value[i+1];
-            player.AbilityPoints += 5;
-            i++;
+            player.LVL = parseInt(expTable.levels[i]);
+            console.log(expTable.exp_value[parseInt(i)+1]);
+            player.MAXEXP = parseInt(expTable.exp_value[parseInt(i)+1]);
+            player.AbilityPoints += parseInt(5);
+            parseInt(i++);
             SaveToLocalStorage();
 
     }

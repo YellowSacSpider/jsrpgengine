@@ -49,6 +49,7 @@ for(let i = 0; i < CharClassArray.length; ++i)
         }
         
         player.DMG = 10;
+        player.MAXEXP = 10;
         SaveToLocalStorage() // Zapisanie danych do localstorage
         console.table(player);
     });

@@ -163,7 +163,7 @@ h1{
 
 .character-box{
 	background-color: grey;
-	height: 600px;
+	height: 1200px;
 	width: 800px;
 	border: 2px solid black;
 	border-radius: 10px;
@@ -184,10 +184,109 @@ h1{
 }
 
 .equipment-box{
+	position: relative;
+	justify-content: center;
 	background-color: grey;
 	height: 400px;
 	width: 400px;
-	margin-left: 100px;
+	margin-left: 250px;
 	border: 2px solid black;
 	border-radius: 10px;
+}
+
+.equipment-slot{
+	position: absolute;
+	background-color: rgba(5, 5, 5, 0.1);
+	height: 64px;
+	width: 64px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+#item-type-helmet{
+	top: 50px;
+	left: 165px;
+}
+
+#item-type-armor{
+	top: 150px;
+	left: 165px;
+}
+
+#item-type-weapon{
+	top: 150px;
+	left: 60px;
+}
+
+#item-type-boots{
+	top: 250px;
+	left: 165px;
+}
+
+#item-type-artifact{
+	background-color: rgba(0, 255, 234, 0.185);
+	top: 250px;
+	left: 270px;
+}
+.inventory-character{
+	position: relative;
+	justify-content: center;
+	background-color: grey;
+	height: 200px;
+	width: 500px;
+	margin-left: 50px;
+	margin-top: 10px;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-left: 250px;
+
+}
+.inventory-row{
+	justify-content: center;
+	display: flex;
+}
+.inventory-slot{
+	background-color: rgba(5, 5, 5, 0.1);
+	height: 64px;
+	width: 64px;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-left: 5px;
+	margin-top: 20px;
+}
+
+.player-hp{
+	font-size: 1rem;
+	color: white;
+	text-shadow: 5px 5px 5px black;
+}
+
+.player-str{
+	font-size: 1rem;
+	color: red;
+	text-shadow: 5px 5px 5px whitesmoke;
+}
+
+.player-dex{
+	font-size: 1rem;
+	color: green;
+	text-shadow: 5px 5px 5px whitesmoke;
+}
+
+.player-charisma{
+	font-size: 1rem;
+	color: purple;
+	text-shadow: 5px 5px 5px whitesmoke;
+}
+
+.player-int{
+	font-size: 1rem;
+	color: blueviolet;
+	text-shadow: 5px 5px 5px whitesmoke;
+}
+
+.player-luck{
+	font-size: 1rem;
+	color: gold;
+	text-shadow: 5px 5px 5px whitesmoke;
 }

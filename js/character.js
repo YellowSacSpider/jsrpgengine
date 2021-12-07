@@ -10,7 +10,12 @@ let AttrCostArray = [1,1,1,1,1,1]; // Do zapisu w local_storage ceny
 
 document.querySelector(".player-name").innerText = `${player.ClassName}`;
 document.querySelector(".player-lvl").innerText = `Level: ${player.LVL}`;
-document.querySelector(".player-hpbar").innerText = `HP: ${player.HP}`;
+document.querySelector(".player-hp").innerText = `HP: ${player.HP}`;
+document.querySelector(".player-str").innerText = `STR: ${player.Strength}`;
+document.querySelector(".player-dex").innerText = `DEX: ${player.Dexterity}`;
+document.querySelector(".player-charisma").innerText = `CHR: ${player.Charisma}`;
+document.querySelector(".player-int").innerText = `INT: ${player.Inteligence}`;
+document.querySelector(".player-luck").innerText = `LUCK: ${player.Luck}`;
 document.querySelector(".player-guild").innerText = `Gildia: ${player.Guild}`;
 document.querySelector(".player-profession").innerText = `Profesja: ${player.Profession}`;
 document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
@@ -27,48 +32,68 @@ for(let i = 0; i < AttrButtonArray.length; ++i)
         if(elem === document.getElementById("hp_add") )
         {
             if(player.AbilityPoints > 0){
-            player.HP += 1;
-            player.AbilityPoints -= 1;
-            document.querySelector(".player-hpbar").innerText = `HP: ${player.HP}`;
-            document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
-            console.log(player.HP, 'hp_add')
-            console.log(elem)
+                player.HP += 1;
+                player.AbilityPoints -= 1;
+                document.querySelector(".player-hp").innerText = `HP: ${player.HP}`;
+                document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
+                console.log(player.HP, 'hp_add')
+                console.log(elem)
             }
         }
         if(elem === document.getElementById("str_add"))
         {
-            player.HP += 1;
-            document.querySelector(".player-hpbar").innerText = `HP: ${player.HP}`;
-            console.log(player.HP, 'str_add')
-            console.log(elem)
+            if(player.AbilityPoints > 0){
+                player.Strength += 1;
+                player.AbilityPoints -= 1;
+                document.querySelector(".player-str").innerText = `STR: ${player.Strength}`;
+                document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
+                console.log(player.Strength, 'str_add')
+                console.log(elem)
+            }
         }
         if(elem === document.getElementById("dex_add"))
         {
-            player.HP += 1;
-            document.querySelector(".player-hpbar").innerText = `HP: ${player.HP}`;
-            console.log(player.HP, 'dex_add')
-            console.log(elem)
+            if(player.AbilityPoints > 0){
+                player.Dexterity += 1;
+                player.AbilityPoints -= 1;
+                document.querySelector(".player-dex").innerText = `DEX: ${player.Dexterity}`;
+                document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
+                console.log(player.Dexterity, 'dex_add')
+                console.log(elem)
+            }
         }
         if(elem === document.getElementById("charisma_add"))
         {
-            player.HP += 1;
-            document.querySelector(".player-hpbar").innerText = `HP: ${player.HP}`;
-            console.log(player.HP, 'charisma_add')
-            console.log(elem)
+            if(player.AbilityPoints > 0){
+                player.Charisma += 1;
+                player.AbilityPoints -= 1;
+                document.querySelector(".player-charisma").innerText = `CHR: ${player.Charisma}`;
+                document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
+                console.log(player.Charisma, 'charisma_add')
+                console.log(elem)
+            }
         }
         if(elem === document.getElementById("int_add"))
         {
-            player.HP += 1;
-            document.querySelector(".player-hpbar").innerText = `HP: ${player.HP}`;
-            console.log(player.HP, 'int_add')
-            console.log(elem)
+            if(player.AbilityPoints > 0){
+                player.Inteligence += 1;
+                player.AbilityPoints -= 1;
+                document.querySelector(".player-int").innerText = `INT: ${player.Inteligence}`;
+                document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
+                console.log(player.Inteligence, 'int_add')
+                console.log(elem)
+            }
         }
         if(elem === document.getElementById("luck_add"))
         {
-            player.HP += 1;
-            document.querySelector(".player-hpbar").innerText = `HP: ${player.HP}`;
-            console.log(player.HP, 'luck_add')
-            console.log(elem)
+            if(player.AbilityPoints > 0){
+                player.Luck += 1;
+                player.AbilityPoints -= 1;
+                document.querySelector(".player-luck").innerText = `LUCK: ${player.Luck}`;
+                document.querySelector(".player-abilitypoints").innerText = `Punkty Umiejętności: ${player.AbilityPoints}`;
+                console.log(player.Luck, 'luck_add')
+                console.log(elem)
+            }
         }
         SaveToLocalStorage()
     });

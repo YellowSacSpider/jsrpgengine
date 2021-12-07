@@ -109,6 +109,7 @@ h1{
 	color: white;
 	background-color: #008CBA;
 	margin: auto;
+	cursor: pointer;
 }
 
 .container-row > .player-box{
@@ -196,11 +197,16 @@ h1{
 
 .equipment-slot{
 	position: absolute;
-	background-color: rgba(5, 5, 5, 0.1);
+	background-color: rgba(5, 5, 5, 0.3);
 	height: 64px;
 	width: 64px;
 	border: 2px solid black;
 	border-radius: 10px;
+	transition-duration: 0.5s;
+}
+
+.equipment-slot:hover{
+	background-color: rgba(5, 5, 5, 0);
 }
 
 #item-type-helmet{
@@ -224,9 +230,13 @@ h1{
 }
 
 #item-type-artifact{
-	background-color: rgba(0, 255, 234, 0.185);
+	background-color: rgba(0, 255, 234, 0.3);
 	top: 250px;
 	left: 270px;
+}
+
+#item-type-artifact:hover{
+	background-color: rgba(0, 255, 234, 0.1);
 }
 .inventory-character{
 	position: relative;
@@ -246,13 +256,18 @@ h1{
 	display: flex;
 }
 .inventory-slot{
-	background-color: rgba(5, 5, 5, 0.1);
+	background-color: rgba(5, 5, 5, 0.3);
 	height: 64px;
 	width: 64px;
 	border: 2px solid black;
 	border-radius: 10px;
 	margin-left: 5px;
 	margin-top: 20px;
+	transition-duration: 0.5s;
+}
+
+.inventory-slot:hover{
+	background-color: rgba(5, 5, 5, 0);
 }
 
 .player-hp{

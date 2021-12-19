@@ -256,6 +256,7 @@ h1{
 	display: flex;
 }
 .inventory-slot{
+	position: relative;
 	background-color: rgba(5, 5, 5, 0.3);
 	height: 64px;
 	width: 64px;
@@ -269,6 +270,21 @@ h1{
 .inventory-slot:hover{
 	background-color: rgba(5, 5, 5, 0);
 }
+
+.hidden{
+	display: none;
+}
+
+.inventory-menu{
+	position: absolute;
+	z-index: 1;
+	background-color: rgb(255, 0, 0, 1);
+	height: 200px;
+	width: 200px;
+	top: 10%;
+	left: 70%;
+}
+
 
 .player-hp{
 	font-size: 1rem;
@@ -304,4 +320,13 @@ h1{
 	font-size: 1rem;
 	color: gold;
 	text-shadow: 5px 5px 5px whitesmoke;
+}
+
+.item{
+	position: absolute;
+	background-color: rgba(5, 5, 5);
+	height: 50px;
+	width: 50px;
+	top: 10%;
+	left: 10%;
 }
